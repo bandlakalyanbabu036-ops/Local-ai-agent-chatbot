@@ -41,7 +41,6 @@ if st.button("Clear chat"):
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
-
 if prompt := st.chat_input("Ask your local AI assistant something"):
     user_message = {"role": "user", "content": prompt}
     st.session_state.messages.append(user_message)
